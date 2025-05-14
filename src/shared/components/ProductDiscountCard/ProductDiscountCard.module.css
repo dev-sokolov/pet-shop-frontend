@@ -1,0 +1,107 @@
+.wrapper {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.card {
+    border: 2px solid #DDDDDD;
+    border-radius: 5px;
+    width: 316px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.imgBox {
+    width: 100%;
+    height: 284px;
+    margin-bottom: 20px;
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+}
+
+.reduction {
+    width: 67px;
+    height: 34px;
+    border-radius: 5px;
+    padding: 6px 8px 4px 8px;
+    background-color: #0D50FF;
+    color: #fff;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.descrBox {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 32px 20px 32px;
+}
+
+.descr {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--main-text-color);
+}
+
+.discPrice {
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--main-text-color);
+}
+
+.price {
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: line-through;
+    color: var(--light-text-color);
+    margin-left: 16px;
+}
+
+.btnBox {
+    position: absolute;
+    bottom: 154px;
+    right: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.btnCard {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--main-background-color);
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 16px 56px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btnCard:hover {
+    background-color: var(--secondary-background-color);
+}
+
+.card:hover .btnBox {
+    opacity: 1;
+}
+
+.link {
+    text-decoration: none;
+}

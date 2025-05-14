@@ -1,0 +1,15 @@
+.discount {
+    background-image: url("../../assets/main-page/discount.png");
+    background-size: cover;
+    padding: 80px 40px 210px 40px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 1.1;
+    color: #fff;
+    width: 80%;
+    margin-bottom: 40px;
+}
+

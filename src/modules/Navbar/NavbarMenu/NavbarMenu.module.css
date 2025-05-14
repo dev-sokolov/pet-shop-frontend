@@ -1,0 +1,22 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    color: #282828;
+}
+
+.link:hover {
+    font-weight: 700;
+}
+
+.link:global(.active) {
+    color: var(--main-background-color);
+}

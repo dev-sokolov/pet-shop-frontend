@@ -1,0 +1,107 @@
+.wrapper {
+    padding: 32px;
+    background-color: #F1F3F4;
+    border-radius: 15px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--main-text-color);
+    margin-bottom: 24px;
+}
+
+.heading {
+    font-weight: 500;
+    font-size: 40px;
+    color: var(--light-text-color);
+}
+
+.total {
+    position: relative;
+    top: 20px;
+}
+
+.data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.summ {
+    font-weight: 700;
+    font-size: 64px;
+    color: var(--main-text-color);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.input {
+    padding: 16px 32px;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--light-text-color);
+    border: 1px solid #DDDDDD;
+    border-radius: 7px;
+}
+
+.error {
+    color: red;
+}
+
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #0D50FF;
+    width: 548px;
+    height: 236px;
+    padding: 32px;
+    top: 316px;
+    left: 446px;
+    color: #fff
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 3%;
+}
+
+.modalBtn {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+    bottom: 20px;
+}
+
+.text {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.1;
+    text-align: left;
+}

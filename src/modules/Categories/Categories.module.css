@@ -1,0 +1,43 @@
+.wrapper {
+    margin-top: 80px;
+    margin-bottom: 106px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    background-color: #DDD;
+    height: 1px;
+    width: 100%;
+}
+
+.decor {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding-left: 32px;
+}
+
+.btn button {
+    width: 142px;
+    height: 36px;
+    color: var(--light-text-color);
+    border: 1px solid #DDD;
+    border-radius: 7px;
+    background-color: #fff;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 126%;
+    letter-spacing: 0%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn:hover button{
+    background-color: #DDD;
+}

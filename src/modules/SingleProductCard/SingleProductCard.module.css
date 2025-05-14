@@ -1,0 +1,130 @@
+.erreor {
+    color: red;
+}
+
+.wrapper {
+    display: flex;
+    gap: 32px;
+    margin: 40px 0 82px;
+}
+
+.imgBox {
+    width: 548px;
+    height: 572px;
+}
+
+.img {
+   max-width: 100%;
+   max-height: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--main-text-color);
+}
+
+.summ {
+    display: flex;
+    gap: 32px;
+}
+
+.cartAdding {
+    display: flex;
+    gap: 32px;
+}
+
+.discPrice {
+    font-weight: 700;
+    font-size: 64px;
+    color: var(--main-text-color);
+}
+
+.price {
+    font-weight: 500;
+    font-size: 40px;
+    text-decoration: line-through;
+    color: var(--light-text-color);
+    position: relative;
+    top: 20px;
+}
+
+.discount {
+    font-weight: 500;
+    font-size: 40px;
+    text-decoration: line-through;
+    color: var(--light-text-color);
+    position: relative;
+    top: 20px
+}
+
+.descrTitle {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--main-text-color);
+    margin-bottom: 16px;
+}
+
+.descr {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--main-text-color);
+}
+
+.math {
+    width: 58px;
+    height: 58px;
+    border-radius: 7px;
+    border-width: 1px;
+    border: 1px solid #DDD;
+    background-color: #fff;
+}
+
+.box {
+    display: flex;
+}
+
+.num {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--main-text-color);
+    width: 96px;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reduction {
+    width: 63px;
+    height: 34px;
+    border-radius: 5px;
+    padding: 6px 8px 4px 8px;
+    background-color: #0D50FF;
+    color: #fff;
+    position: absolute;
+    left: -15px;
+
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.bonus {
+    position: relative;
+}
+
+.btnStyle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

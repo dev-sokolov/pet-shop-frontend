@@ -1,0 +1,115 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 780px;
+    display: flex;
+    border: 1px solid #DDDDDD;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.img {
+    width: 200px;
+    height: 180px;
+}
+
+.img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.descr {
+    padding: 32px;
+    width: 580px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--main-text-color);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--main-text-color);
+}
+
+.discount {
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: line-through;
+    color: var(--light-text-color);
+    position: relative;
+    top: 15px
+}
+
+.hedding {
+    display: flex;
+    margin-bottom: 32px;
+    justify-content: space-between;
+}
+
+.data {
+    display: flex;
+    align-items: center;
+}
+
+.summ {
+    display: flex;
+    gap: 16px;
+    margin-left: 32px;
+}
+
+.math {
+    width: 58px;
+    height: 58px;
+    border-radius: 7px;
+    border-width: 1px;
+    border: 1px solid #DDD;
+    background-color: #fff;
+}
+
+.box {
+    display: flex;
+}
+
+.num {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--main-text-color);
+    width: 96px;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numCount {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btnStyle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,11 @@
+
+.wrapper {
+    margin: 29px 0;
+    width: 70px;
+    height: 70px;
+}
+
+.logo {
+    min-width: 100%;
+    min-height: 100%;
+}

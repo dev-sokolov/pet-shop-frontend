@@ -1,0 +1,57 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 690px;
+}
+
+.wrapImg {
+    display: flex;
+}
+
+.img {
+    width: 320px;
+    height: 270px;
+}
+
+.number {
+    width: 179px;
+    height: 245px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 27px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+.descr {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--light-text-color);
+}

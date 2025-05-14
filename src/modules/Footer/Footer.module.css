@@ -1,0 +1,45 @@
+.info {
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.item {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #F1F3F4;
+    border-radius: 10px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--light-text-color);
+}
+
+.text {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.1;
+    color: var(--main-text-color);
+}
+
+.descr {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.wideBox {
+    width: 780px;
+}
+
+.narrowBox {
+    width: 548px;
+}
+
+.map {
+    height: 350px;
+}
+
