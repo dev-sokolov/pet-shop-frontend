@@ -82,7 +82,6 @@
 }
 
 .btnCard {
-    font-family: "Montserrat", sans-serif;
     background-color: var(--main-background-color);
     color: #fff;
     font-weight: 600;
@@ -105,3 +104,11 @@
 .link {
     text-decoration: none;
 }
+
+.btnCard.active {
+    background-color: #FFF; 
+    color: var(--main-text-color);
+    padding: 16px 84px;
+    border: 1px solid var(--main-text-color);
+}
+

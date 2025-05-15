@@ -1,6 +1,8 @@
 import { addToCart } from '../../redux/cart/cart-slice';
 import { useDispatch } from 'react-redux';
 
+import { useLocation } from 'react-router-dom';
+
 import { useSearchParams } from 'react-router-dom';
 import styles from './SingleProductCard.module.css';
 import { getProductApi } from '../../shared/api/category-api';
@@ -14,6 +16,7 @@ import Button from '../../shared/components/Button/Button';
 import Container from '../Container/Container';
 
 const SingleProductCard = () => {
+    const location = useLocation();
 
     const dispatch = useDispatch();
     const handleAddToCart = (prod) => {
@@ -27,7 +30,6 @@ const SingleProductCard = () => {
     const handleDecrease = () => {
         setCount(prev => Math.max(1, prev - 1));
     };
-
 
     const [searchParams, setSearchParams] = useSearchParams();
     const id = searchParams.get('id')
@@ -60,7 +62,7 @@ const SingleProductCard = () => {
                 <div> <div className={styles.imgBox}><img className={styles.img} src={`http://localhost:3333${item.image}`} alt="product" /></div></div>
 
                 <div className={styles.info}>
-                    <h3 className={styles.title}>BELCANDO Dog Food</h3>
+                    <h3 className={styles.title}>{item.title}</h3>
                     <div className={styles.summ}>
                         {item.discont_price ? (
                             <>
@@ -87,7 +89,7 @@ const SingleProductCard = () => {
                         <div className={styles.box}>
                             <div >
                                 <button className={styles.math} onClick={() => handleDecrease()}>
-                                    <div  className={styles.btnStyle}><Minus /></div>
+                                    <div className={styles.btnStyle}><Minus /></div>
                                 </button>
                             </div>
                             <div className={styles.num} > <div className={styles.numCount}>{count}</div> </div>
@@ -101,7 +103,7 @@ const SingleProductCard = () => {
                     </div>
                     <div >
                         <h5 className={styles.descrTitle}>Description</h5>
-                        <p className={styles.descr}>Versatile selection: discover the culinary world for your little four-legged friend with 2 types of dry food and 6 types of wet food. So there is something for every taste. High acceptance: our balanced formula is rich in essential nutrients, vitamins and minerals and is tailored to the needs of small dog breeds. An all-round supply that leaves nothing to be desired. Dry food: Finest GF Lamb - easily digestible and a croquette coated with instant sauce for extra taste. Finest Croc - rich in meat and with grape seed flour. Wet food: you will receive a selection of different types of wet food from our range: single protein chicken, single protein buffalo, duck with rice and cranberries, rabbit with millet and sweet potato, lamb with rice and tomatoes and chicken/duck with millet and potatoes. Made in Germany: Our feed is manufactured under the strictest quality standards in Germany and contains no artificial additives. All meat products used come from food-safe animals.</p>
+                        <p className={styles.descr}>{item.description}</p>
                     </div>
                 </div>
             </div>

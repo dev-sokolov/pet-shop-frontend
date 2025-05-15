@@ -23,7 +23,7 @@ const SaleSectionMainPage = () => {
             try {
                 setLoading(true);
                 const { data } = await getAllProductsApi();
-                setCards(data);
+                setCards(data.data);
             }
             catch (error) {
                 setError(error.message);

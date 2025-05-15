@@ -18,10 +18,12 @@ const NavbarCart = () => {
     return (
         <div className={styles.wrapper}>
             <NavLink to="/cart"><NavBasket className={styles.cart} />
-                <div className={styles.circle} >
-                    <p className={styles.num}>{cartAmount}</p>
-                </div></NavLink>
-
+                {cartAmount > 0 && (
+                    <div className={styles.circle} >
+                        <p className={styles.num}>{cartAmount}</p>
+                    </div>
+                )}
+            </NavLink>
         </div>
     )
 }

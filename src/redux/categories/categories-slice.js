@@ -19,7 +19,7 @@ const categoriesSlice = createSlice({
             .addCase(getAllCategory.rejected, rejected)
             .addCase(getAllCategory.fulfilled, (store, { payload }) => {
                 store.loading = false;
-                store.categories = payload;
+                store.categories = payload.data;
             })
     },
 });

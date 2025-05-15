@@ -28,6 +28,7 @@
     font-weight: 700;
     font-size: 40px;
     color: var(--main-text-color);
+    line-height: 1.4;
 }
 
 .summ {

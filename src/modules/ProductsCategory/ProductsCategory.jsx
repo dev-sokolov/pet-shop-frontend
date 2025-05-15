@@ -20,6 +20,8 @@ const ProductsCategory = () => {
     const [error, setError] = useState(null);
     const [category, setCategory] = useState([]);
     const [data, setData] = useState([]);
+    const [categoryName, setCategoryName] = useState();
+    const [categoryLink, setCategoryLink] = useState();
 
     useEffect(() => {
         const fetchProductCard = async () => {
@@ -27,8 +29,10 @@ const ProductsCategory = () => {
                 setLoading(true);
                 const { data } = await getProductsCategoryApi(id);
                 setCard(data);
-                setCategory(data.category)
-                setData(data.data)
+                setCategoryLink(data.data.category.id)
+                setCategory(data.data.category)
+                setData(data.data.products)
+                setCategoryName(data.data.category.title)
             }
             catch (error) {
                 setError(error.message);
@@ -50,14 +54,14 @@ const ProductsCategory = () => {
                 </Link>
                 <div className={styles.routeLine}></div>
                 <Link to="/categories" >
-                    <div className={styles.btn} style={{ color: "#000" }}>
+                    <div className={styles.btn}>
                         <button>Categories</button>
                     </div>
                 </Link>
                 <div className={styles.routeLine}></div>
-                <Link to="/categories" >
-                    <div className={styles.btnMain} style={{ color: "#000" }}>
-                        <button>Categories</button>
+                <Link to={categoryLink} >
+                    <div className={styles.btnMain}>
+                        <button>{categoryName}</button>
                     </div>
                 </Link>
             </div>
@@ -68,7 +72,6 @@ const ProductsCategory = () => {
                 {error && <p className={styles.error}>Search error{error}</p>}
                 <ProductsCategoryPageItem data={data} loading={loading} error={error} />
             </div>
-
         </>
     )
 }

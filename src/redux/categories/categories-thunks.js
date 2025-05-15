@@ -10,4 +10,3 @@ export const getAllCategory = createAsyncThunk(
         return rejectWithValue(error?.response?.data?.message);
     }
 );
-

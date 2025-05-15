@@ -32,4 +32,9 @@ export const getSaleApi = requestDecorator(async (payload) => {
     return data;
 })
 
+export const getContactsApi = requestDecorator(async () => {
+    const { data } = await backendInstance.get("/contacts");
+    return data;
+})
+
 
