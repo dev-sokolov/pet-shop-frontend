@@ -2,7 +2,7 @@ import { deleteProduct, increaseProduct, decreaseProduct } from "../../redux/car
 import { useDispatch, useSelector } from "react-redux";
 
 import minus from '../../assets/cart/minus.svg'
-import plus from '../../assets/cart/plus.svg'
+import plus from '../../assets/cart/plusSvg.svg';
 import x from '../../assets/cart/x.svg'
 
 import { selectCart } from '../../redux/cart/cart-selectors';

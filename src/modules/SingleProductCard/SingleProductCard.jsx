@@ -12,7 +12,8 @@ import { useEffect, useState } from 'react';
 // import plus from '../../assets/cart/plus.svg'
 // import minus from '../../assets/cart/minus.svg'
 import minus from '../../assets/cart/minus.svg'
-import plus from '../../assets/cart/plus.svg'
+import plus from '../../assets/cart/plusSvg.svg';
+
 
 import Button from '../../shared/components/Button/Button';
 
