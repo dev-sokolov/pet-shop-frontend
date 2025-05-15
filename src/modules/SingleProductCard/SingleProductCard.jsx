@@ -8,8 +8,8 @@ import styles from './SingleProductCard.module.css';
 import { getProductApi } from '../../shared/api/category-api';
 import { useEffect, useState } from 'react';
 
-import Plus from '../../assets/cart/plus';
-import Minus from '../../assets/cart/minus';
+import Plus from '../../assets/cart/plus.jsx';
+import Minus from '../../assets/cart/minus.jsx';
 
 import Button from '../../shared/components/Button/Button';
 
