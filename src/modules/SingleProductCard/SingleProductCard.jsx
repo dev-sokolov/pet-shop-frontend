@@ -8,8 +8,11 @@ import styles from './SingleProductCard.module.css';
 import { getProductApi } from '../../shared/api/category-api';
 import { useEffect, useState } from 'react';
 
-import Minus from "../../assets/cart/Minus.jsx";
-import Plus from "../../assets/cart/Plus.jsx";
+// import minus from '../../assets/cart/minus.svg'
+// import plus from '../../assets/cart/plus.svg'
+// import minus from '../../assets/cart/minus.svg'
+import minus from '../../assets/cart/minus.svg'
+import plus from '../../assets/cart/plus.svg'
 
 import Button from '../../shared/components/Button/Button';
 
@@ -89,13 +92,13 @@ const SingleProductCard = () => {
                         <div className={styles.box}>
                             <div >
                                 <button className={styles.math} onClick={() => handleDecrease()}>
-                                    <div className={styles.btnStyle}><Minus /></div>
+                                    <div className={styles.btnStyle}><img src={minus} alt="minus" /></div>
                                 </button>
                             </div>
                             <div className={styles.num} > <div className={styles.numCount}>{count}</div> </div>
                             <div >
                                 <button className={styles.math} onClick={() => handleIncrease()}>
-                                    <div className={styles.btnStyle} ><Plus /></div>
+                                    <div className={styles.btnStyle} ><img src={plus} alt="plus" /></div>
                                 </button>
                             </div>
                         </div>

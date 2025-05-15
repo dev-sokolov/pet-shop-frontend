@@ -1,10 +1,9 @@
 import { deleteProduct, increaseProduct, decreaseProduct } from "../../redux/cart/cart-slice";
 import { useDispatch, useSelector } from "react-redux";
 
-
-import XComponent from '../../assets/cart/XComponent.jsx';
-import Minus from '../../assets/cart/Minus.jsx';
-import Plus from "../../assets/cart/Plus.jsx";
+import minus from '../../assets/cart/minus.svg'
+import plus from '../../assets/cart/plus.svg'
+import x from '../../assets/cart/x.svg'
 
 import { selectCart } from '../../redux/cart/cart-selectors';
 
@@ -35,19 +34,19 @@ const CartBox = () => {
                     <div className={styles.descr}>
                         <div className={styles.hedding}>
                             <div className={styles.title}>{item.title}</div>
-                            <button className={styles.btn} onClick={() => removeFromCart(item.id)}><XComponent /></button>
+                            <button className={styles.btn} onClick={() => removeFromCart(item.id)}> <img src={x} alt="x" /> </button>
                         </div>
                         <div className={styles.data}>
                             <div className={styles.box}>
                                 <div >
                                     <button className={styles.math} onClick={() => handleDecrease(item.id)}>
-                                        <div className={styles.btnStyle}  ><Minus /></div>
+                                        <div className={styles.btnStyle}  ><img src={minus} alt="minus" /></div>
                                     </button>
                                 </div>
                                 <div className={styles.num} > <div className={styles.numCount}>{item.count}</div> </div>
                                     <div >
                                     <button className={styles.math} onClick={() => handleIncrease(item.id)}>
-                                        <div className={styles.btnStyle}  ><Plus /></div>
+                                        <div className={styles.btnStyle}  ><img src={plus} alt="plus" /></div>
                                     </button>
                                 </div>
                             </div>
