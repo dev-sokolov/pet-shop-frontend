@@ -6,3 +6,50 @@
     margin-bottom: 80px;
 }
 
+.btn button {
+    width: 142px;
+    height: 36px;
+    color: var(--light-text-color);
+    border: 1px solid #DDD;
+    border-radius: 7px;
+    background-color: #fff;
+
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn:hover button{
+    background-color: #DDD;
+}
+
+.btnMain button {
+    width: 142px;
+    height: 36px;
+    color: var(--main-text-color);
+    border: 1px solid #DDD;
+    border-radius: 7px;
+    background-color: #fff;
+
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btnMain:hover button{
+    background-color: #DDD;
+}
+
+.route {
+    margin-top: 40px;
+    display: flex;  
+    align-items: center;
+}
+
+.routeLine {
+    width: 16px;
+    border-bottom: 1px solid #DDD;
+}
+

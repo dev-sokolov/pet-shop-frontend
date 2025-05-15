@@ -20,6 +20,19 @@ const CategoryCard = ({ cards, isAllCategories }) => {
     const items = elements.slice(0, 4);
     if (isAllCategories) return (
         <>
+            <div className={styles.route}>
+                <Link to="/" >
+                    <div className={styles.btn}>
+                        <button>Main page</button>
+                    </div>
+                </Link>
+                <div className={styles.routeLine}></div>
+                <Link to="/categories" >
+                    <div className={styles.btnMain} style={{color: "#000"}}>
+                        <button>Categories</button>
+                    </div>
+                </Link>
+            </div>
             <SectionTitle title="Categories" />
             <div className={styles.wrap}>{elements}</div>
         </>

@@ -2,6 +2,9 @@ import Container from "../Container/Container";
 
 import GoogleMap from "./GoogleMap/GoogleMap ";
 
+import Instagram from "../../assets/footer/Instagram";
+import WhatsApp from "../../assets/footer/WhatsApp";
+
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 
 import styles from './Footer.module.css'
@@ -15,14 +18,14 @@ const Footer = () => {
                     <div className={styles.descrWrap}>
                         <div className={styles.descr} >
                             <div className={`${styles.item} ${styles.wideBox}`}>
-                                <div className={styles.title }>Phone</div>
+                                <div className={styles.title}>Phone</div>
                                 <div className={styles.text}>+49 30 915-88492</div>
                             </div>
                             <div className={`${styles.item} ${styles.narrowBox}`}>
                                 <div className={styles.title}>Socials</div>
-                                <div>
-                                    <div></div>
-                                    <div></div>
+                                <div className={styles.media}>
+                                    <a href="https://www.instagram.com"><div className={styles.iconBlock}><Instagram className={styles.icon}/></div></a> 
+                                    <a href="https://www.whatsapp.com/"><div className={styles.iconBlock}><WhatsApp className={styles.icon}/></div></a>
                                 </div>
                             </div>
                         </div>
@@ -38,7 +41,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className={styles.map}>
-                        {/* <GoogleMap /> */}
+                        <GoogleMap />
                     </div>
                 </div>
             </Container>

@@ -84,6 +84,11 @@
     border-width: 1px;
     border: 1px solid #DDD;
     background-color: #fff;
+    cursor: pointer;
+}
+
+.math:hover {
+    background-color: #DDD;
 }
 
 .box {

@@ -2,6 +2,8 @@ import ProductsCategoryPageItem from '../../shared/components/ProductsCategoryPa
 
 import SectionTitle from '../../shared/components/SectionTitle/SectionTitle';
 
+import { Link } from 'react-router-dom';
+
 import { useSearchParams } from 'react-router-dom';
 import styles from './ProductsCategory.module.css';
 
@@ -18,7 +20,6 @@ const ProductsCategory = () => {
     const [error, setError] = useState(null);
     const [category, setCategory] = useState([]);
     const [data, setData] = useState([]);
-
 
     useEffect(() => {
         const fetchProductCard = async () => {
@@ -41,12 +42,31 @@ const ProductsCategory = () => {
 
     return (
         <>
+            <div className={styles.route}>
+                <Link to="/" >
+                    <div className={styles.btn}>
+                        <button>Main page</button>
+                    </div>
+                </Link>
+                <div className={styles.routeLine}></div>
+                <Link to="/categories" >
+                    <div className={styles.btn} style={{ color: "#000" }}>
+                        <button>Categories</button>
+                    </div>
+                </Link>
+                <div className={styles.routeLine}></div>
+                <Link to="/categories" >
+                    <div className={styles.btnMain} style={{ color: "#000" }}>
+                        <button>Categories</button>
+                    </div>
+                </Link>
+            </div>
 
             <SectionTitle title={category.title} />
             <div className={styles.wrapper}>
                 {loading && <p>Loading search...</p>}
                 {error && <p className={styles.error}>Search error{error}</p>}
-                <ProductsCategoryPageItem data={data} loading={loading} error={error}/>
+                <ProductsCategoryPageItem data={data} loading={loading} error={error} />
             </div>
 
         </>
