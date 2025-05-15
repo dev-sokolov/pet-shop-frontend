@@ -2,11 +2,9 @@ import { deleteProduct, increaseProduct, decreaseProduct } from "../../redux/car
 import { useDispatch, useSelector } from "react-redux";
 
 
-import XComponent from "../../assets/cart/XComponent.jsx";
+import XComponent from '../../assets/cart/XComponent.jsx';
+import Minus from '../../assets/cart/Minus.jsx';
 import Plus from "../../assets/cart/Plus.jsx";
-import Minus from "../../assets/cart/Minus.jsx";
-
-import plus from '../../assets/cart/'
 
 import { selectCart } from '../../redux/cart/cart-selectors';
 
