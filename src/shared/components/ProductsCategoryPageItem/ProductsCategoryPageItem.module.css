@@ -111,3 +111,8 @@
     padding: 16px 84px;
     border: 1px solid var(--main-text-color);
 }
+
+.filterwrap {
+    display: flex;
+    flex-direction: column;
+}

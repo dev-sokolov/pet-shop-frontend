@@ -67,12 +67,16 @@ const ProductsCategoryPageItem = ({ data, loading, error }) => {
 
     return (
         <>
-            <Filtration />
-            <div className={styles.wrapper}>
-                {elements}
-                {loading && <p>Loading...</p>}
-                {error && error.message}
+            <div className={styles.filterwrap}>
+                <Filtration />
+                <div className={styles.wrapper}>
+                    {elements}
+                    {loading && <p>Loading...</p>}
+                    {error && error.message}
+                </div>
             </div>
+
+
         </>
     );
 }
