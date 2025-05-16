@@ -3,6 +3,7 @@
     height: 48px;
     transition: 0.4s;
     position: relative;
+    transition: 0.5s;
 }
 
 .cart {
@@ -11,7 +12,7 @@
 }
 
 .wrapper:hover {
-    background-color: #a8ebff;
+    bottom: 5px;
 }
 
 .circle {
