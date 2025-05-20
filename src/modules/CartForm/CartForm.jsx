@@ -12,6 +12,7 @@ import { useForm } from 'react-hook-form';
 import styles from './CartForm.module.css';
 
 import { resetStatus } from '../../redux/order/order-slice';
+import { deleteAllProducts } from '../../redux/cart/cart-slice';
 
 const CartForm = () => {
 
@@ -42,7 +43,9 @@ const CartForm = () => {
     const handleCloseModal = () => {
         setIsModalOpen(false);
         dispatch(resetStatus());
+        dispatch(deleteAllProducts());
     };
+
     return (
         <>
             <div className={styles.wrapper}>
@@ -69,7 +72,7 @@ const CartForm = () => {
                     <div className={styles.modal}>
                         <div className={styles.header}>
                             <div>Congratulations! </div>
-                            <div > <button className={styles.modalBtn} onClick={() => setIsModalOpen(false)}>X</button></div>
+                            <div > <button className={styles.modalBtn} onClick={handleCloseModal}>X</button></div>
                         </div>
                         <div>
                             <p className={styles.text}>Your order has been successfully placed on the website.</p>
