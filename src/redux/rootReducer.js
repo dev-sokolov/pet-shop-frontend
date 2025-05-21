@@ -5,7 +5,7 @@ import storage from "redux-persist/lib/storage";
 import cartReducer from './cart/cart-slice';
 import categoriesReducer from './categories/categories-slice';
 import orderReducer from './order/order-slice'
-import saleReducer from './order/order-slice'
+import saleReducer from './sale/sale-slice'
 
 
 const rootReducer = combineReducers({

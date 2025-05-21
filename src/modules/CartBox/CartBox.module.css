@@ -24,8 +24,9 @@
 }
 
 .descr {
-    padding: 32px;
-    width: 580px;
+    flex: 1; /* адаптивная ширина */
+    padding: 16px;
+    min-width: 0; /* Важно для правильной работы overflow */
 }
 
 .title {
@@ -117,4 +118,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+  }
+
+  .descr {
+    width: 100%;
+  }
 }

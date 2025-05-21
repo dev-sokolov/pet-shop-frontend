@@ -4,7 +4,18 @@
     padding: 80px 40px 210px 40px;
 }
 
-.title {
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeInText {
+    animation: fadeIn 1s ease-in-out;
     font-weight: 700;
     font-size: 96px;
     line-height: 1.1;
@@ -12,4 +23,3 @@
     width: 80%;
     margin-bottom: 40px;
 }
-

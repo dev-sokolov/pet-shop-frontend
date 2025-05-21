@@ -68,7 +68,7 @@ const ProductsCategoryPageItem = ({ data, loading, error }) => {
     return (
         <>
             <div className={styles.filterwrap}>
-                <Filtration />
+                <Filtration showDiscountCheckbox={true}/>
                 <div className={styles.wrapper}>
                     {elements}
                     {loading && <p>Loading...</p>}

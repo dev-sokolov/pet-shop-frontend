@@ -7,7 +7,7 @@ import styles from './DiscountSection.module.css'
 const DiscountSection = () => {
     return (
         <section className={styles.discount}>
-            <h1 className={styles.title}>
+            <h1 className={styles.fadeInText}>
                 Amazing Discounts on Pets Products!
             </h1>
             <Link to="/sales">

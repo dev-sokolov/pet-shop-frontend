@@ -42,12 +42,14 @@ const Footer = () => {
                     <div className={styles.info}>
                         <div className={styles.descrWrap}>
                             <div className={styles.descr} >
-                                <a href="tel:">
-                                    <div className={`${styles.item} ${styles.wideBox}`}>
+
+                                <div className={`${styles.item} ${styles.wideBox}`}>
+                                    <a href="tel:">
                                         <div className={styles.title}>Phone</div>
                                         <div className={styles.text}>{contacts.phone}</div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
+
                                 <div className={`${styles.item} ${styles.narrowBox}`}>
                                     <div className={styles.title}>Socials</div>
                                     <div className={styles.media}>
@@ -72,8 +74,9 @@ const Footer = () => {
                         </div>
                     </div>
                 </Container>
-            )}
-        </footer>
+            )
+            }
+        </footer >
     )
 }
 

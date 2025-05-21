@@ -1,5 +1,5 @@
 import NavbarLogo from './NavbarLogo/NavbarLogo';
-import NavbarMenu from './NavbarMenu/NavbarMenu';
+import BurgerMenu from './BurgerMenu/BurgerMenu';
 import NavbarCart from './NavbarCart/NavbarCart';
 
 import styles from './Navbar.module.css';
@@ -12,7 +12,7 @@ const Navbar = () => {
             <Container>
                 <div className={styles.wrapper}>
                     <NavbarLogo />
-                    <NavbarMenu />
+                    <BurgerMenu />
                     <NavbarCart />
                 </div>
             </Container>

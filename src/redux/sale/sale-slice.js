@@ -7,7 +7,7 @@ import { getSale } from "./sale-thunks";
 const initialState = {
     loading: false,
     error: null,
-    status: 11
+    status: null
 };
 
 const saleSlice = createSlice({

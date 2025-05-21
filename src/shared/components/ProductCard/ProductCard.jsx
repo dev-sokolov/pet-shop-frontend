@@ -69,7 +69,7 @@ const ProductCard = ({ cards = [], loading, error }) => {
 
     return (
         <>
-            <Filtration />
+            <Filtration showDiscountCheckbox={true} />
             <div className={styles.wrapper}>
                 {elements}
                 {loading && <p>Loading...</p>}

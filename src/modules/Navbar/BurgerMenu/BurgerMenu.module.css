@@ -1,0 +1,91 @@
+.container {
+  position: relative;
+}
+
+/* Бургер */
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.line {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.open:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.open:nth-child(2) {
+  opacity: 0;
+}
+
+.open:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Меню */
+.menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  width: auto;
+  z-index: 10;
+}
+
+.menuOpen {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  color: #282828;
+  line-height: 130%;
+}
+
+.link:hover {
+  font-weight: 700;
+}
+
+.link:global(.active) {
+  color: var(--main-background-color);
+}
+
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    flex-direction: row;
+    border: none;
+    padding: 0;
+    gap: 32px;
+  }
+}
+
+
+

@@ -31,3 +31,36 @@
     font-size: 20px;
     margin-bottom: 10px;
 }
+
+.btnStyle {
+    font-family: "Montserrat", sans-serif;
+    background-color: #fff;
+    color: var(--main-text-color);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 16px 32px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btnActiveStyle {
+    font-family: "Montserrat", sans-serif;
+    background-color: #F1F3F4;
+    color: #0D50FF;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 16px 32px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btnStyle:hover {
+    background-color: var(--main-text-color);
+    color: #fff;
+}

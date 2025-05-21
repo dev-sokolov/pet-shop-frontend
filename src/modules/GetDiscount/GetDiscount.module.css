@@ -28,3 +28,9 @@
 .boxForm {
     width: 516px;
 }
+
+@media (max-width: 1024px) {
+  .boxImg {
+    display: none;
+  }
+}

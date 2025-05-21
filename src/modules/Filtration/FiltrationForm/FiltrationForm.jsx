@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import styles from './FiltrationForm.module.css';
 
-const FiltrationForm = () => {
+const FiltrationForm = ({ showDiscountCheckbox }) => {
   const { register, watch, setValue } = useForm();
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -43,11 +43,13 @@ const FiltrationForm = () => {
         <input className={styles.input} {...register("from")} type="number" placeholder='from' id='from' />
         <input className={styles.input} {...register("to")} type="number" placeholder='to' id='to' />
       </div>
-      <div className={styles.box}>
-        <label className={`${styles.inputTitle} ${styles.checkbox}`} htmlFor="discounted">Discounted items</label>
-        <input className={styles.custom} {...register("discounted")} type="checkbox" id="discounted" />
+      {showDiscountCheckbox &&
+        <div className={styles.box}>
+          <label className={`${styles.inputTitle} ${styles.checkbox}`} htmlFor="discounted">Discounted items</label>
+          <input className={styles.custom} {...register("discounted")} type="checkbox" id="discounted" />
+        </div>
+      }
 
-      </div>
       <div className={styles.box}>
         <label className={styles.inputTitle} htmlFor="sort">Sorted</label>
         <select className={styles.select} {...register("sort")} id="sort">
