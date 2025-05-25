@@ -64,3 +64,7 @@
     background-color: var(--main-text-color);
     color: #fff;
 }
+
+.error {
+    color: red;
+}

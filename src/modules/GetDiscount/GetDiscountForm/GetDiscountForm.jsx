@@ -1,24 +1,29 @@
 import { useForm } from "react-hook-form"
 
-import { selectSaleStatus } from "../../../redux/sale/sale-selectors"
-import { useSelector } from "react-redux"
-import { useEffect } from "react"
+import { useState } from "react"
+
+import { getSaleApi } from "../../../shared/api/category-api"
 
 import styles from './GetDiscountForm.module.css'
 
-const GetDiscountForm = ({ submitForm }) => {
+const GetDiscountForm = () => {
+    const [saleStatus, setSeleStatus] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
-    const saleStatus = useSelector(selectSaleStatus);
-
-    useEffect(() => {
-        if (saleStatus === "OK") {
+    const onSubmit = async (values) => {
+        setLoading(true);
+        setError(null);
+        const { data, error } = await getSaleApi({ ...values });
+        setLoading(false);
+        if (data) {
+            setSeleStatus(data.status);
             reset();
+        } else {
+            setError(error?.response?.data?.message || "Request failed")
         }
-    }, [saleStatus, reset]);
-
-    const onSubmit = values => {
-        submitForm(values);
     };
 
     return (
@@ -30,6 +35,8 @@ const GetDiscountForm = ({ submitForm }) => {
                 {errors.userPhone && <p className={styles.error}>{errors.userPhone.message}</p>}
                 <input {...register("userEmail", { required: "Email is required" })} className={styles.inputStyle} type="email" placeholder="Email" />
                 {errors.userEmail && <p className={styles.error}>{errors.userEmail.message}</p>}
+                {error && <p className={styles.error}>{error}</p>}
+                {loading && <p>Loading...</p>}
                 <div className={styles.btn}>
                     <button className={saleStatus === "OK" ? styles.btnActiveStyle : styles.btnStyle}  >{saleStatus === "OK" ? "Request Submitted" : "Get a discount"}</button>
                 </div>
