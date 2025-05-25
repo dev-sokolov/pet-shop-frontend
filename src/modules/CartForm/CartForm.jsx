@@ -1,49 +1,57 @@
-import Button from '../../shared/components/Button/Button';
-
+import { useSelector, useDispatch } from 'react-redux';
 import { selectCart } from '../../redux/cart/cart-selectors';
 
-import { useDispatch, useSelector } from 'react-redux';
-import { useState, useEffect } from 'react';
-
-import { selectOrderStatus } from '../../redux/order/order-selectors';
-import { sendOrder } from '../../redux/order/order-thunks';
-
-import { useForm } from 'react-hook-form';
-import styles from './CartForm.module.css';
-
-import { resetStatus } from '../../redux/order/order-slice';
 import { deleteAllProducts } from '../../redux/cart/cart-slice';
 
+import { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+
+import Button from '../../shared/components/Button/Button';
+import styles from './CartForm.module.css';
+
+import { sendOrderApi } from '../../shared/api/category-api';
+
 const CartForm = () => {
-
-    const status = useSelector(selectOrderStatus);
-
+    const [status, setStatus] = useState(null);
+    const [error, setError] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [loading, setLoading] = useState(false);
+
+    const dispatch = useDispatch()
+
+    const products = useSelector(selectCart);
+    
+    const amount = products.reduce((acc, item) => acc + item.count, 0);
+    const summ = products.reduce((acc, item) => acc + (item.price * item.count), 0);
+
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+
+    const onSubmit = async (values) => {
+        setLoading(true);
+        setError(null);
+        const { data, error } = await sendOrderApi({
+            ...values,
+            products, 
+        });
+
+        setLoading(false);
+        if (data) {
+            setStatus(data.status);
+            reset();
+        } else {
+            setError(error?.response?.data?.message || "Request failed");
+        }
+    };
 
     useEffect(() => {
         if (status === "OK") {
             setIsModalOpen(true);
-            dispatch(resetStatus());
         }
-    }, [status])
-
-    const dispatch = useDispatch();
-
-    const products = useSelector(selectCart);
-    const amount = products.reduce((acc, item) => acc + item.count, 0)
-    const summ = products.reduce((acc, item) => acc + (item.price * item.count), 0)
-
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
-
-    const onSubmit = (values) => {
-        dispatch(sendOrder(values));
-        reset();
-    }
+    }, [status]);
 
     const handleCloseModal = () => {
         setIsModalOpen(false);
-        dispatch(resetStatus());
-        dispatch(deleteAllProducts());
+           dispatch(deleteAllProducts());
     };
 
     return (
@@ -64,27 +72,30 @@ const CartForm = () => {
                     {errors.tel && <p className={styles.error}>{errors.tel.message}</p>}
                     <input {...register("email", { required: "Email is required" })} type="email" placeholder='Email' className={styles.input} />
                     {errors.email && <p className={styles.error}>{errors.email.message}</p>}
-                    <Button type="submit" style={{ marginTop: "16px" }}>Order</Button>
+                    {error && <p className={styles.error}>{error}</p>}
+                    <Button type="submit" style={{ marginTop: "16px" }} disabled={loading}>
+                        {loading ? "Processing..." : "Order"}
+                    </Button>
                 </form>
             </div>
             {isModalOpen && (
                 <div className={styles.modalBackdrop}>
                     <div className={styles.modal}>
                         <div className={styles.header}>
-                            <div>Congratulations! </div>
-                            <div > <button className={styles.modalBtn} onClick={handleCloseModal}>X</button></div>
+                            <div>Congratulations!</div>
+                            <div><button className={styles.modalBtn} onClick={handleCloseModal}>X</button></div>
                         </div>
                         <div>
-                            <p className={styles.text}>Your order has been successfully placed on the website.</p>
+                            <p className={styles.text}>Your order has been successfully placed on the website.</p>
                         </div>
                         <div>
-                            <p className={styles.text}>A manager will contact you shortly to confirm your order.</p>
+                            <p className={styles.text}>A manager will contact you shortly to confirm your order.</p>
                         </div>
                     </div>
                 </div>
             )}
         </>
-    )
-}
+    );
+};
 
-export default CartForm
+export default CartForm;

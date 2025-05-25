@@ -24,9 +24,11 @@
 }
 
 .descr {
-    flex: 1; /* адаптивная ширина */
+    flex: 1;
+    /* адаптивная ширина */
     padding: 16px;
-    min-width: 0; /* Важно для правильной работы overflow */
+    min-width: 0;
+    /* Важно для правильной работы overflow */
 }
 
 .title {
@@ -121,16 +123,16 @@
 }
 
 @media (max-width: 768px) {
-  .wrapper {
-    flex-direction: column;
-  }
+    .wrapper {
+        flex-direction: column;
+    }
 
-  .img {
-    width: 100%;
-    height: auto;
-  }
+    .img {
+        width: 100%;
+        height: auto;
+    }
 
-  .descr {
-    width: 100%;
-  }
+    .descr {
+        width: 100%;
+    }
 }
