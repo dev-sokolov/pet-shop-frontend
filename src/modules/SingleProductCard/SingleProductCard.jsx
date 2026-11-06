@@ -60,7 +60,7 @@ const SingleProductCard = () => {
     const product = card.map(item => {
         return (
             <div key={item.id} className={styles.wrapper}>
-                <div> <div className={styles.imgBox}><img className={styles.img} src={`http://localhost:3333${item.image}`} alt="product" /></div></div>
+                <div> <div className={styles.imgBox}><img className={styles.img} src={item.image} alt="product" /></div></div>
 
                 <div className={styles.info}>
                     <h3 className={styles.title}>{item.title}</h3>

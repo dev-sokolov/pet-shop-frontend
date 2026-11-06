@@ -11,7 +11,7 @@ const CategoryCard = ({ cards, isAllCategories }) => {
         return (
             <Link key={item.id} className={styles.link} to={`/products-category/?id=${item.id}`}>
                 <div key={item.id} className={styles.item} >
-                    <img src={`http://localhost:3333${item.image}`} alt="animal" />
+                    <img src={item.image} alt="animal" />
                     <p >{item.title} </p> </div>
             </Link>
         )

@@ -32,7 +32,7 @@ const ProductDiscountCardMainPage = ({ cards = [], loading, error }) => {
                                 {Math.round(((item.price - item.discont_price) / item.price) * 100)}%
                             </div>}
 
-                        <img src={`http://localhost:3333${item.image}`} alt="product" />
+                        <img src={item.image} alt="product" />
                     </div>
                     <div className={styles.descrBox}>
                         <div className={styles.descr}>{item.title}</div>

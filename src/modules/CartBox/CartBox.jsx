@@ -30,7 +30,7 @@ const CartBox = () => {
         return (
             <div className={styles.wrap} key={index}>
                 <div className={styles.wrapper} >
-                    <div className={styles.img}><img src={`http://localhost:3333${item.image}`} alt="product" /></div>
+                    <div className={styles.img}><img src={item.image} alt="product" /></div>
                     <div className={styles.descr}>
                         <div className={styles.hedding}>
                             <div className={styles.title}>{item.title}</div>
