@@ -53,3 +53,43 @@
     border-bottom: 1px solid #DDD;
 }
 
+@media (max-width: 768px) {
+    .route {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    .route > * {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .route a:last-child {
+        flex: 1 1 100%;
+    }
+
+    .btn button,
+    .btnMain button {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        min-height: 36px;
+        padding: 8px 12px;
+        white-space: normal;
+    }
+
+    .btnMain button {
+        width: 100%;
+        text-align: left;
+    }
+
+    .wrapper {
+        display: block;
+        gap: 16px;
+        margin-bottom: 40px;
+        width: 100%;
+        min-width: 0;
+    }
+}
+

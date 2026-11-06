@@ -23,3 +23,15 @@
     width: 80%;
     margin-bottom: 40px;
 }
+
+@media (max-width: 768px) {
+    .discount {
+        padding: 32px 16px 48px;
+    }
+
+    .fadeInText {
+        font-size: 40px;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}

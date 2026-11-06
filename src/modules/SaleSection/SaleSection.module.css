@@ -44,3 +44,21 @@
     width: 16px;
     border-bottom: 1px solid #DDD;
 }
+
+@media (max-width: 768px) {
+    .route {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    .btn button,
+    .btnMain button {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        min-height: 36px;
+        padding: 8px 12px;
+        white-space: normal;
+    }
+}

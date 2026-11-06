@@ -93,3 +93,47 @@
     width: 16px;
     border-bottom: 1px solid #DDD;
 }
+
+@media (max-width: 768px) {
+    .wrap {
+        gap: 16px;
+    }
+
+    .item {
+        width: 100%;
+    }
+
+    .item:hover {
+        bottom: 0;
+    }
+
+    .title {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .route {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .decor {
+        width: 100%;
+        padding-left: 0;
+        justify-content: flex-end;
+    }
+
+    .decor a {
+        flex-shrink: 0;
+    }
+
+    .btn button,
+    .btnMain button {
+        width: auto;
+        max-width: 100%;
+        white-space: nowrap;
+        padding: 0 16px;
+    }
+}

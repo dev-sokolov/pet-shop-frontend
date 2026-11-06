@@ -15,6 +15,12 @@
     background-color: var(--secondary-background-color);
 }
 
+@media (max-width: 768px) {
+    .btn {
+        padding: 14px 24px;
+    }
+}
+
 
 
 

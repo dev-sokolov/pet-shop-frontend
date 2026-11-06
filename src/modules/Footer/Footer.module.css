@@ -75,3 +75,39 @@ a {
     text-decoration: none;
 }
 
+@media (max-width: 768px) {
+    .descr {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .wideBox,
+    .narrowBox {
+        width: 100%;
+    }
+
+    .item {
+        padding: 20px;
+    }
+
+    .text {
+        font-size: 22px;
+        overflow-wrap: anywhere;
+    }
+
+    .info {
+        margin-bottom: 40px;
+    }
+
+    .map {
+        height: 220px;
+        overflow: hidden;
+    }
+
+    .map iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}
+

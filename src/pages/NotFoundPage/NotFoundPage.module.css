@@ -55,3 +55,48 @@
     vertical-align: middle;
     color: var(--light-text-color);
 }
+
+@media (max-width: 768px) {
+    .wrapper {
+        margin: 32px 0;
+        padding: 0 16px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .wrapImg {
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+        gap: 4px;
+    }
+
+    .img {
+        width: 42%;
+        height: auto;
+    }
+
+    .img img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .number {
+        width: 24%;
+        height: auto;
+    }
+
+    .number svg {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+}

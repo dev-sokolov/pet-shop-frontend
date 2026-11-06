@@ -105,3 +105,36 @@
     line-height: 1.1;
     text-align: left;
 }
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 20px;
+    }
+
+    .title,
+    .heading {
+        font-size: 28px;
+    }
+
+    .data {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .summ {
+        font-size: 36px;
+    }
+
+    .modal {
+        width: min(548px, calc(100vw - 32px));
+        height: auto;
+    }
+
+    .header {
+        font-size: 24px;
+    }
+
+    .input {
+        padding: 14px 16px;
+    }
+}

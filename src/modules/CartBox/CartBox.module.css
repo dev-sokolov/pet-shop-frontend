@@ -125,14 +125,52 @@
 @media (max-width: 768px) {
     .wrapper {
         flex-direction: column;
+        min-width: 0;
+        max-width: 100%;
     }
 
     .img {
         width: 100%;
-        height: auto;
+        max-width: 100%;
+        height: 200px;
+        min-width: 0;
+    }
+
+    .img img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .descr {
         width: 100%;
+    }
+
+    .hedding {
+        margin-bottom: 16px;
+    }
+
+    .data,
+    .summ {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .summ {
+        margin-left: 0;
+    }
+
+    .price {
+        font-size: 28px;
+    }
+
+    .math {
+        width: 44px;
+        height: 44px;
+    }
+
+    .num {
+        width: 64px;
     }
 }

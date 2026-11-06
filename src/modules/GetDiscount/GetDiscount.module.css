@@ -33,4 +33,24 @@
   .boxImg {
     display: none;
   }
+
+  .boxForm {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+    line-height: 1.2;
+    padding: 24px 16px 16px;
+  }
+
+  .formWrap {
+    padding: 0 16px 8px;
+  }
+
+  .wrapper {
+    margin-bottom: 40px;
+  }
 }

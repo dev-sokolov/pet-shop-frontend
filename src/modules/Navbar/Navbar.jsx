@@ -8,7 +8,7 @@ import Container from '../Container/Container';
 
 const Navbar = () => {
     return (
-        <nav >
+        <nav className={styles.nav}>
             <Container>
                 <div className={styles.wrapper}>
                     <NavbarLogo />

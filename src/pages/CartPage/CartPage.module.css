@@ -57,3 +57,40 @@
 .btn:hover button {
     background-color: #DDD;
 }
+
+@media (max-width: 768px) {
+    .title {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    .decor {
+        width: 100%;
+        padding-left: 0;
+        justify-content: flex-end;
+    }
+
+    .decor a {
+        flex-shrink: 0;
+    }
+
+    .btn button {
+        width: auto;
+        white-space: nowrap;
+        padding: 0 16px;
+    }
+
+    .wrapper,
+    .boxWrapper,
+    .formWrapper {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .wrapper {
+        gap: 24px;
+    }
+}

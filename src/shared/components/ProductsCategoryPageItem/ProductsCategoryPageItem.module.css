@@ -116,3 +116,53 @@
     display: flex;
     flex-direction: column;
 }
+
+@media (max-width: 768px) {
+    .filterwrap,
+    .wrapper,
+    .card,
+    .link,
+    .imgBox {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .filterwrap,
+    .card {
+        width: 100%;
+    }
+
+    .wrapper {
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .imgBox {
+        height: 220px;
+    }
+
+    .imgBox img {
+        object-fit: cover;
+    }
+
+    .descrBox {
+        padding: 0 16px 16px;
+    }
+
+    .discPrice {
+        font-size: 32px;
+    }
+
+    .btnBox {
+        position: static;
+        opacity: 1;
+        margin: 0 16px 16px;
+    }
+
+    .btnCard,
+    .btnCard.active {
+        display: block;
+        width: 100%;
+        padding: 14px 16px;
+    }
+}

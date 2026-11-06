@@ -112,3 +112,51 @@
     border: 1px solid var(--main-text-color);
 }
 
+@media (max-width: 768px) {
+    .wrapper {
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .card,
+    .wrapper,
+    .link,
+    .imgBox {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .imgBox {
+        height: 220px;
+    }
+
+    .imgBox img {
+        object-fit: cover;
+    }
+
+    .descrBox {
+        padding: 0 16px 16px;
+    }
+
+    .discPrice {
+        font-size: 32px;
+    }
+
+    .btnBox {
+        position: static;
+        opacity: 1;
+        margin: 0 16px 16px;
+    }
+
+    .btnCard,
+    .btnCard.active {
+        display: block;
+        width: 100%;
+        padding: 14px 16px;
+    }
+}
+

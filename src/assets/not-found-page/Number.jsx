@@ -5,6 +5,7 @@ const Number = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     width={180}
     height={246}
+    viewBox="0 0 180 246"
     fill="none"
     {...props}
   >
